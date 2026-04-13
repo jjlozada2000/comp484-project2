@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Your Giga Pet</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <header>
+      <h1>Your Giga Pet</h1>
+    </header>
+
+    <main>
+      <section class="pet-image-container">
+        <img class="pet-image" src="/images/squirtle.png" alt="Squirtle">
+
+        <!-- Speech bubble notifications appear here -->
+        <div id="speech-area">
+          <div class="notification-template">Hello!</div>
+        </div>
+      </section>
+
+      <section class="dashboard">
+        <div>
+          Rename: <input type="text" id="name-input" placeholder="Enter name" value="Squirtle">
+        </div>
+        <div>Name: <strong><span class="name"></span></strong></div>
+        <div>Weight: <strong><span class="weight"></span> lbs</strong></div>
+        <div>Happiness: <strong><span class="happiness"></span> tail wags/min</strong></div>
+        <div>Cleanliness: <strong><span class="cleanliness"></span> / 10</strong></div>
+
+        <div class="button-container">
+          <button class="treat-button">Treat</button>
+          <button class="play-button">Play</button>
+          <button class="exercise-button">Exercise</button>
+          <button class="bath-button">Bath</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Take good care of your Giga Pet!</p>
+    </footer>
+
+  </body>
+</html>
