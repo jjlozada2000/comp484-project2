@@ -6,7 +6,11 @@ $(function() {
     $('.exercise-button').click(clickedExerciseButton);
     $('.bath-button').click(clickedBathButton);
 
-    // .change() fires when the user edits the name field and clicks away
+    // .change() is a jQuery event method that listens for a change on a form input.
+    // It fires when the user modifies the value of the #name-input field and then
+    // clicks away or presses Tab (i.e. when the field loses focus after being edited).
+    // Inside the callback, $(this).val() reads the new value the user typed,
+    // saves it to pet_info, and triggers a speech bubble with the updated name.
     $('#name-input').change(function() {
         pet_info['name'] = $(this).val();
         updatePetInfoInHtml();
@@ -75,7 +79,12 @@ function updatePetInfoInHtml() {
     $('.cleanliness').text(pet_info['cleanliness']);
 }
 
-// .clone() copies the hidden template bubble and appends it to the speech area
+// .clone() is a jQuery method that makes a deep copy of a selected DOM element.
+// Here it copies the hidden .notification-template div that sits in the HTML.
+// A new copy is made each time the pet speaks so the original template is never
+// modified or removed. The copy has its class swapped, gets the message text set,
+// and is appended to #speech-area. It then fades in, waits, fades out, and is
+// removed from the DOM — while the original template stays untouched for next time.
 function showNotification(message) {
     var template = $('.notification-template');
     var bubble = template.clone();
