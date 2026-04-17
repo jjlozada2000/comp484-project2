@@ -77,7 +77,8 @@ function updatePetInfoInHtml() {
 
 // .clone() copies the hidden template bubble and appends it to the speech area
 function showNotification(message) {
-    var bubble = $('.notification-template').clone();
+    var template = $('.notification-template');
+    var bubble = template.clone();
     bubble.removeClass('notification-template');
     bubble.addClass('notification-bubble');
     bubble.text(message);
